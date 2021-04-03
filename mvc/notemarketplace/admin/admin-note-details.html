@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+   
+   <!--meta-->
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0 ,user-scalable=no">
+
+    <title>Notes Marketplace </title>
+    
+    <!--open sans font-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+     <!--font-awesome-->
+     <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+     <!--bootstrap-->
+     <link  rel="stylesheet" href="css/bootstrap/bootstrap.min.4.5.css">
+     <!--css-->
+     <link rel="stylesheet"  href="css/style.css">
+<!--responsive css-->
+     <link rel="stylesheet"  href="css/responsive.css">
+</head>
+<body>
+   
+	<!--header-->
+	<header>
+		<nav id="navuser" class="navbar nav-notes navbar-fixed-top navbar-expand-lg navbar-light  ">
+			<div class="container-fluid ">
+				<div class="site-nav-wrapper">
+					<div class="navbar-header navbar-brand">
+						<a href="admin-dashboard.html"><img src="images/images/logo.png"></a><span id="mobile-nav-open-btn">
+							&#9776;</span>
+					</div>
+					<!--main menu-->
+
+					<div class="collapse navbar-collapse">
+						<ul class="navbar-nav pull-right ">
+							<li class="nav-item"><a class="smooth-scroll nav-link" href="admin-dashboard.html">Dashboard</a></li>
+
+							<li class="nav-item dropdown"><a class="smooth-scroll nav-link active" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Notes</a>
+								<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+									<a class="dropdown-item" href="admin-notes-under-review.html">Notes Under Review</a>
+									<a class="dropdown-item" href="admin-published-notes.html">Published Notes</a>
+									<a class="dropdown-item" href="admin-downloaded-notes.html">Downloaded Notes</a>
+									<a class="dropdown-item" href="admin-rejected-notes.html">Rejected Notes</a>
+								</div>
+							</li>
+							<li class="nav-item"><a class="smooth-scroll nav-link" href="admin-members.html">Members</a></li>
+							<li class="nav-item dropdown"><a class="smooth-scroll nav-link" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Reports</a>
+								<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+									<a class="dropdown-item" href="admin-spamreports.html">Spam Reports</a>
+								</div>
+							</li>
+							<li class="nav-item dropdown"><a class="smooth-scroll nav-link" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Settings</a>
+								<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+									<a class="dropdown-item" href="admin-manage-system.html">Manage System Configuration</a>
+									<a class="dropdown-item" href="admin-manage-administration.html">Manage Administration</a>
+									<a class="dropdown-item" href="admin-manage-category.html">Manage Category</a>
+
+									<a class="dropdown-item" href="admin-manage-type.html">Manage Type</a>
+									<a class="dropdown-item" href="admin-manage-country.html">Manage Countries</a>
+								</div>
+							</li>
+							<li class="nav-item dropdown"><a class="smooth-scroll nav-link pic-nav " href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="images/images/user-img.png"></a>
+								<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+									<a class="dropdown-item" href="admin-myprofile.html">Update Profile</a>
+									<a class="dropdown-item" href="change-password.html">Change Password</a>
+									<a class="dropdown-item dd-logout" href="admin-login.html"><p>Logout</p></a>
+								</div>
+							</li>
+							<li class="nav-item"><a class="smooth-scroll nav-link" id="button-nav" href="admin-login.html">
+									<p>Logout</p>
+								</a></li>
+						</ul>
+					</div>
+					<!--mobile menu-->
+					<div id="mobile-nav">
+						<div class="navbar-header">
+							<img src="images/images/logo.png">
+							<!--mobile menu close button-->
+							<span id="mobile-nav-close-btn">&times;</span>
+						</div>
+
+						<div id="mobile-nav-content">
+							<ul class="navbar-nav  ">
+								<li class="nav-item"><a class="smooth-scroll nav-link " href="admin-dashboard.html">Dashboard</a></li>
+
+								<li class="nav-item dropdown"><a class="smooth-scroll nav-link active" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Notes</a>
+									<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+										<a class="dropdown-item" href="admin-notes-under-review.html">Notes Under Review</a>
+										<a class="dropdown-item" href="admin-published-notes.html">Published Notes</a>
+										<a class="dropdown-item" href="admin-downloaded-notes.html">Downloaded Notes</a>
+										<a class="dropdown-item" href="admin-rejected-notes.html">Rejected Notes</a>
+									</div>
+								</li>
+								<li class="nav-item"><a class="smooth-scroll nav-link" href="admin-members.html">Members</a></li>
+								<li class="nav-item dropdown"><a class="smooth-scroll nav-link" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Reports</a>
+									<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+										<a class="dropdown-item" href="admin-spamreports.html">Spam Reports</a>
+									</div>
+								</li>
+								<li class="nav-item dropdown"><a class="smooth-scroll nav-link" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Settings</a>
+									<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+										<a class="dropdown-item" href="admin-manage-system.html">Manage System Configuration</a>
+										<a class="dropdown-item" href="admin-manage-administration.html">Manage Administration</a>
+										<a class="dropdown-item" href="admin-manage-category.html">Manage Category</a>
+
+										<a class="dropdown-item" href="admin-manage-type.html">Manage Type</a>
+										<a class="dropdown-item" href="admin-manage-country.html">Manage Countries</a>
+									</div>
+								</li>
+								<li class="nav-item dropdown"><a class="smooth-scroll nav-link pic-nav " href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="images/images/user-img.png"></a>
+									<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+										<a class="dropdown-item" href="admin-myprofile.html">Update Profile</a>
+										<a class="dropdown-item" href="change-password.html">Change Password</a>
+										<a class="dropdown-item dd-logout" href="admin-login.html"><p>Logout</p></a>
+									</div>
+								</li>
+								<li class="nav-item"><a class="smooth-scroll nav-link" id="button-nav" href="admin-login.html">
+										<p>Logout</p>
+									</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+
+	</header>
+
+<div id="note-detail">
+      <div class="container">
+          <div id="note-detail-1 " class="note-deatil-admin">
+              <h3>Note Details</h3>
+          
+          <div class="row">
+          <div class=" col-md-12 col-lg-7"  id="note-detail-1-left">
+       
+        <div class="row">
+          <div class=" col-5 col-md-5 note-details-img">
+          
+              <img src="images/images/1.jpg">
+              </div>
+              <div class="col-7 col-md-7">
+          <h4>Computer Science</h4>
+           <h5>Sciences</h5>
+           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque ipsum ducimus consequatur accusantium, veniam voluptatum et fugit sunt eum maxime commodi.</p>
+           
+           <div class="row"><div class="container">
+       <button type="submit" id="note-download"   data-toggle="modal" data-target="#thankyou-popup" class="btn btn-primary">Download / $15</button></div>
+
+              </div></div></div>
+             
+              </div>
+
+   
+   
+       <div class="col-md-12 col-lg-5  col-sm-12 col-xs-12" id="note-detail-1-right">
+       <div class="row">
+        <div class="note-right-heading col-4 col-lg-4 ">
+            <h5>Institute:</h5>
+        </div>  
+        <div class="note-description col-8">
+            <h5>University of California</h5>
+           </div> </div>
+        <div class="row">
+        <div class="note-right-heading col-md-5 col-sm-5 col-lg-5 col-sm-5">
+            <h5>Country:</h5>
+        </div>  
+        <div class="note-description col-md-7 col-sm-7 col-lg-7 col-sm-7 ">
+            <h5>United State</h5>
+            </div> </div>
+        <div class="row">
+        <div class="note-right-heading col-5">
+            <h5>Course Name:</h5>
+        </div>  
+        <div class="note-description col-7">
+            <h5>Computer Engineering</h5>
+            </div> </div>
+        <div class="row">
+        <div class="note-right-heading col-md-6 col-sm-6 col-lg-6 col-sm-6">
+            <h5>Course Code:</h5>
+        </div>  
+        <div class="note-description col-md-6 col-sm-6 col-lg-6 col-sm-6">
+            <h5>248705</h5>
+            </div> </div>
+        <div class="row">
+        <div class="note-right-heading col-4">
+            <h5>Professor:</h5>
+        </div>  
+        <div class="note-description col-8">
+            <h5>Mr. Richard Brown</h5>
+            </div> </div>
+        <div class="row">
+        <div class="note-right-heading col-md-6 col-sm-6 col-lg-6 col-sm-6">
+            <h5>Number of Pages:</h5>
+        </div>  
+        <div class="note-description col-md-6 col-sm-6 col-lg-6 col-sm-6">
+            <h5>277</h5>
+            </div> </div>
+        <div class="row">
+        <div class="note-right-heading col-6">
+            <h5>Approved Date:</h5>
+        </div>  
+        <div class="note-description col-6">
+            <h5>November 25 2020</h5>
+        </div> 
+           </div><div class="row">
+        <div class="note-right-heading col-md-5 col-sm-5 col-lg-5 col-sm-5">
+            <h5>Rating:</h5>
+        </div>  
+        <div class="note-description col-md-7 col-sm-7 col-lg-7 col-xs-7"><div class="row">
+         <div class="col-md-6 col-sm-6 col-lg-6 col-sm-6">
+                          <div class="notes-star" >
+                 <img src="images/images/star.png">
+                 <img src="images/images/star.png">
+                 <img src="images/images/star.png">
+                 <img src="images/images/star.png">
+                 <img src="images/images/star-white.png">
+             </div>       </div>  
+                                    <h5>100 Reviews</h5>
+           </div> </div></div>
+        <div class="note-right-heading note-red col-md-12 col-sm-12 sol-xs-12 col-lg-12">
+            <h5>5 Users have marked this note as inappropriate</h5>
+        </div>  
+        
+        
+       </div>
+        </div>
+        
+        
+              </div></div>
+       
+       
+       <!--bottom-->
+       <div class="note-details-2 container">
+         <div class="row">
+          <div class="col-md-12 col-sm-12 col-lg-5 col-xs-12">
+           <div class="note-details-2-left">
+           <h3>Notes Preview</h3>
+           <div id="Iframe-Cicis-Menu-To-Go" class="set-margin-cicis-menu-to-go">
+  <div class="responsive-wrapper 
+     responsive-wrapper-padding-bottom-90pct"
+     style="-webkit-overflow-scrolling: touch; overflow: auto;">
+     <iframe src="images/images/sample.pdf">
+      
+    </iframe>
+  </div>
+</div>
+</div>     
+       </div>
+       
+       <div class="col-md-12 col-lg-7 col-sm-12">
+        <div class="note-detail-heading">
+        <h3>Customer Reviews</h3></div>
+          <!--reviewer 1-->
+          <div class="note-details-2-right">
+        <div class="row">
+            <div class="col-md-2 col-lg-2 col-3 reviewer-img">
+                <img src="images/images/reviewer-1.png">
+            </div>
+            <div class="col-md-9 col-lg-9 col-8">
+            <div class="reviewer-info">
+            <h6>Richard Brown</h6>
+              <div class="notes-star">
+                 <img src="images/images/star.png">
+                 <img src="images/images/star.png">
+                 <img src="images/images/star.png">
+                 <img src="images/images/star.png">
+                 <img src="images/images/star-white.png">
+             </div>
+            </div></div><div class="col-md-1 col-lg-1 col-1 mr-0"><div class="delete"><img src="images/images/delete.png"></div></div>
+             
+             <div class="col-md-2 col-lg-2 col-3"> </div><div class="col-md-10 col-lg-10 col-9"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p></div>
+        </div>
+        
+        <!--reviewer 2-->
+        <div class="row">
+            <div class="col-md-2 col-lg-2 col-3 reviewer-img">
+                <img src="images/images/reviewer-2.png">
+            </div>
+            <div class="col-md-9 col-lg-9 col-8">
+            <div class="reviewer-info">
+            <h6>Alice Ortiaz</h6>
+             <div class="notes-star">
+                 <img src="images/images/star.png">
+                 <img src="images/images/star.png">
+                 <img src="images/images/star.png">
+                 <img src="images/images/star.png">
+                 <img src="images/images/star-white.png">
+             </div>
+                                 
+                </div></div><div class="col-md-1 col-lg-1 col-1 mr-0"><div class="delete"><img src="images/images/delete.png"></div></div>
+                
+             <div class="col-md-2 col-lg-2 col-3"> </div><div class="col-md-10 col-lg-10 col-9"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p></div>
+        </div>
+        
+        <!--reviewer 3-->
+        <div class="row" id="reviewer-3">
+            <div class="col-md-2  col-lg-2 col-sm-2 reviewer-img">
+                <img src="images/images/reviewer-3.png">
+            </div>
+            <div class="col-md-9 col-lg-9 col-sm-8">
+            <div class="reviewer-info" >
+            <h6>Sara Passmore</h6>
+             <div class="notes-star">
+                 <img src="images/images/star.png">
+                 <img src="images/images/star.png">
+                 <img src="images/images/star.png">
+                 <img src="images/images/star.png">
+                 <img src="images/images/star-white.png">
+             </div>
+                                    
+            </div>
+            </div><div class="col-md-1 col-lg-1 col-sm-1 col-1 mr-0 ml-0 "><div class="delete"><img src="images/images/delete.png"></div></div>
+            <div class="col-md-2 col-sm-3 col-lg-2 col-3"> </div><div class="col-md-10 col-lg-10 col-sm-9 col-9"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p></div>
+            </div>
+        
+        
+       </div></div>
+       
+    
+       </div>
+       </div>
+       </div>
+       
+<div class="footer"><hr><div class="container"><div class="row"><div class="col-md-6 col-sm-7">
+        <p>Copyright <span>&#169;</span> Tatvasoft All rights reserved.</p></div>
+        <div class="col-md-6 col-sm-5 social-icons">
+            <ul class="social-list"> 
+                                            
+                                             <li> <a href="#"><i class="fa fa-linkedin"> </i></a></li>
+                                            <li> <a href="#"><i class="fa fa-twitter"> </i></a></li>
+                                            <li> <a href="#"><i class="fa fa-facebook"> </i></a></li>
+                                        
+            </ul> </div></div></div></div>
+       
+       
+        <!--jquery-->
+  <script src="js/jquery.js"></script> 
+  <!--bootstrap-->
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+  
+  <!--js-->
+  <script src="js/script.js"></script>
+    </body></html>

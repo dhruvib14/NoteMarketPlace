@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+	<!--meta-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0 ,user-scalable=no">
+
+	<title>Notes Marketplace </title>
+
+	<!--open sans font-->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+	<!--font-awesome-->
+	<link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+	<!--bootstrap-->
+	<link rel="stylesheet" href="css/bootstrap/bootstrap.min.4.5.css">
+	<!--css-->
+	<link rel="stylesheet" href="css/style.css">
+	<!--responsive css-->
+	<link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+	<!--header-->
+	<header>
+		<nav id="navuser" class="navbar nav-notes navbar-fixed-top navbar-expand-lg navbar-light  ">
+			<div class="container-fluid ">
+				<div class="site-nav-wrapper">
+					<div class="navbar-header navbar-brand">
+						<a href="admin-dashboard.html"><img src="images/images/logo.png"></a><span id="mobile-nav-open-btn">
+							&#9776;</span>
+					</div>
+					<!--main menu-->
+
+					<div class="collapse navbar-collapse">
+						<ul class="navbar-nav pull-right ">
+							<li class="nav-item"><a class="smooth-scroll nav-link" href="admin-dashboard.html">Dashboard</a></li>
+
+							<li class="nav-item dropdown"><a class="smooth-scroll nav-link " href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Notes</a>
+								<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+									<a class="dropdown-item" href="admin-notes-under-review.html">Notes Under Review</a>
+									<a class="dropdown-item" href="admin-published-notes.html">Published Notes</a>
+									<a class="dropdown-item" href="admin-downloaded-notes.html">Downloaded Notes</a>
+									<a class="dropdown-item" href="admin-rejected-notes.html">Rejected Notes</a>
+								</div>
+							</li>
+							<li class="nav-item"><a class="smooth-scroll nav-link " href="admin-members.html">Members</a></li>
+							<li class="nav-item dropdown"><a class="smooth-scroll nav-link" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Reports</a>
+								<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+									<a class="dropdown-item" href="admin-spamreports.html">Spam Reports</a>
+								</div>
+							</li>
+							<li class="nav-item dropdown"><a class="smooth-scroll nav-link active" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Settings</a>
+								<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+									<a class="dropdown-item" href="admin-manage-system.html">Manage System Configuration</a>
+									<a class="dropdown-item" href="admin-manage-administration.html">Manage Administration</a>
+									<a class="dropdown-item" href="admin-manage-category.html">Manage Category</a>
+
+									<a class="dropdown-item" href="admin-manage-type.html">Manage Type</a>
+									<a class="dropdown-item" href="admin-manage-country.html">Manage Countries</a>
+								</div>
+							</li>
+							<li class="nav-item dropdown"><a class="smooth-scroll nav-link pic-nav " href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="images/images/user-img.png"></a>
+								<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+									<a class="dropdown-item" href="admin-myprofile.html">Update Profile</a>
+									<a class="dropdown-item" href="change-password.html">Change Password</a>
+									<a class="dropdown-item dd-logout" href="admin-login.html"><p>Logout</p></a>
+								</div>
+							</li>
+							<li class="nav-item"><a class="smooth-scroll nav-link" id="button-nav" href="admin-login.html">
+									<p>Logout</p>
+								</a></li>
+						</ul>
+					</div>
+					<!--mobile menu-->
+					<div id="mobile-nav">
+						<div class="navbar-header">
+							<img src="images/images/logo.png">
+							<!--mobile menu close button-->
+							<span id="mobile-nav-close-btn">&times;</span>
+						</div>
+
+						<div id="mobile-nav-content">
+							<ul class="navbar-nav  ">
+								<li class="nav-item"><a class="smooth-scroll nav-link " href="admin-dashboard.html">Dashboard</a></li>
+
+								<li class="nav-item dropdown"><a class="smooth-scroll nav-link" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Notes</a>
+									<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+										<a class="dropdown-item" href="admin-notes-under-review.html">Notes Under Review</a>
+										<a class="dropdown-item" href="admin-published-notes.html">Published Notes</a>
+										<a class="dropdown-item" href="admin-downloaded-notes.html">Downloaded Notes</a>
+										<a class="dropdown-item" href="admin-rejected-notes.html">Rejected Notes</a>
+									</div>
+								</li>
+								<li class="nav-item"><a class="smooth-scroll nav-link " href="admin-members.html">Members</a></li>
+								<li class="nav-item dropdown"><a class="smooth-scroll nav-link" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Reports</a>
+									<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+										<a class="dropdown-item" href="admin-spamreports.html">Spam Reports</a>
+									</div>
+								</li>
+								<li class="nav-item dropdown"><a class="smooth-scroll nav-link active" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Settings</a>
+									<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+										<a class="dropdown-item" href="admin-manage-system.html">Manage System Configuration</a>
+										<a class="dropdown-item" href="admin-manage-administration.html">Manage Administration</a>
+										<a class="dropdown-item" href="admin-manage-category.html">Manage Category</a>
+
+										<a class="dropdown-item" href="admin-manage-type.html">Manage Type</a>
+										<a class="dropdown-item" href="admin-manage-country.html">Manage Countries</a>
+									</div>
+								</li>
+								<li class="nav-item dropdown"><a class="smooth-scroll nav-link pic-nav " href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="images/images/user-img.png"></a>
+									<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+										<a class="dropdown-item" href="admin-myprofile.html">Update Profile</a>
+										<a class="dropdown-item" href="change-password.html">Change Password</a>
+										<a class="dropdown-item dd-logout" href="admin-login.html"><p>Logout</p></a>
+									</div>
+								</li>
+								<li class="nav-item"><a class="smooth-scroll nav-link" id="button-nav" href="admin-login.html">
+										<p>Logout</p>
+									</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+
+	</header>
+
+	<section id="in-progress-notes" class="admin-manage">
+		<div class="container">
+			<div class="admin-manage-admin">
+				<div class="row horizontal-heading">
+					<div class="col-md-6 ">
+						<h3>Manage Administration</h3>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="row no-gutters ">
+
+				<div class="col-md-6 col-lg-6 col-sm-6 col-xs-12"><button type="submit" href="admin-add-administration.html" class="btn btn-primary btn-admin dashboard-btn "><a href="admin-add-administration.html">ADD ADMINISTRATION</a></button></div>
+				<div class="dashboard-search ">
+					<input type="text" class="form-control" id="search-text-dashboard" placeholder="     Search">
+					<i class="fa fa-search"></i>
+					<button type="submit" class="btn btn-primary btn-search dashboard-btn ">Search</button>
+
+				</div>
+			</div>
+		</div>
+
+
+		<div class="container">
+			<div class="table-responsive">
+				<table class="table">
+					<thead>
+						<tr>
+							<th scope="col" class="text-center">SR NO.</th>
+							<th scope="col">FIRST NAME</th>
+							<th scope="col">LAST NAME</th>
+							<th scope="col">EMAIL</th>
+							<th scope="col">PHONE NO.</th>
+							<th scope="col">DATE ADDED</th>
+							<th scope="col">ACTIVE</th>
+							<th scope="col">ACTION</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="text-center">1</td>
+							<td>Khyati</td>
+							<td>Patel</td>
+							<td>khyatipatel@gmail.com</td>
+							<td>9898999988</td>
+							<td>09-10-2020, 10:10</td>
+							<td class="text-center">Yes</td>
+							<td><img src="images/images/edit.png"><img src="images/images/delete.png"></td>
+						</tr>
+						<tr>
+							<td class="text-center">2</td>
+							<td>Rahul</td>
+							<td>Shah</td>
+							<td>rahulshah@gmail.com</td>
+							<td>9898434988</td>
+							<td>10-10-2020, 12:30</td>
+							<td class="text-center">Yes</td>
+							<td><img src="images/images/edit.png"><img src="images/images/delete.png"></td>
+						</tr>
+						<tr class="highlight">
+							<td class="text-center">3</td>
+							<td>Suman</td>
+							<td>Trivedi</td>
+							<td>sumantrivedi@gmail.com</td>
+							<td>7878434988</td>
+							<td>11-10-2020, 01:00</td>
+							<td class="text-center">No</td>
+							<td><img src="images/images/edit.png"><img src="images/images/delete.png"></td>
+						</tr>
+
+
+						<tr>
+
+							<td class="text-center">4</td>
+							<td>Raj</td>
+							<td>Malhotra</td>
+							<td>rajmalhotra77@gmail.com</td>
+							<td>9898432988</td>
+							<td>12-10-2020, 10:10</td>
+							<td class="text-center">Yes</td>
+							<td><img src="images/images/edit.png"><img src="images/images/delete.png"></td>
+						</tr>
+						<tr>
+							<td class="text-center">5</td>
+							<td>Niya</td>
+							<td>Patel</td>
+							<td>niyapatel12@gmail.com</td>
+							<td>8742932974</td>
+							<td>13-10-2020, 11:25</td>
+							<td class="text-center">No</td>
+							<td><img src="images/images/edit.png"><img src="images/images/delete.png"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<!-- pagination -->
+		<nav aria-label="Page navigation example" id="paging">
+			<ul class="pagination justify-content-center">
+				<li class="page-item">
+					<a class="page-link" href="" aria-label="Previous">
+						<img src="images/images/left-arrow.png" alt="">
+					</a>
+				</li>
+				<li class="page-item"><a class="page-link" href="#">1</a></li>
+				<li class="page-item"><a class="page-link" href="#">2</a></li>
+				<li class="page-item"><a class="page-link" href="#">3</a></li>
+				<li class="page-item"><a class="page-link" href="#">4</a></li>
+				<li class="page-item"><a class="page-link" href="#">5</a></li>
+				<li class="page-item">
+					<a class="page-link" href="" aria-label="Next">
+						<img style="color: white;" src="images/images/right-arrow.png" alt="">
+					</a>
+				</li>
+			</ul>
+		</nav>
+		<!-- end pagination -->
+
+
+
+	</section>
+
+
+
+	<div class="admin-footer">
+		<hr>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-sm-4 sol-xs-3">
+					vesion 1.1.24
+				</div>
+				<div class="col-md-6 col-sm-8 col-xs-9 text-right">
+					<p>Copyright <span>&#169;</span> Tatvasoft All rights reserved.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--jquery-->
+	<script src="js/jquery.js"></script>
+	<!--bootstrap-->
+	<script src="js/bootstrap/bootstrap.bundle.min.js"></script>
+	<script src="js/bootstrap/bootstrap.min.js"></script>
+
+	<!--js-->
+	<script src="js/script.js"></script>
+</body>
+
+</html>
