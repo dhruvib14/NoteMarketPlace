@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+	<!--meta-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0 ,user-scalable=no">
+
+	<title>Notes Marketplace </title>
+
+	<!--open sans font-->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+	<!--font-awesome-->
+	<link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+	<!--bootstrap-->
+	<link rel="stylesheet" href="css/bootstrap/bootstrap.min.4.5.css">
+	<!--css-->
+	<link rel="stylesheet" href="css/style.css">
+	<!--responsive-->
+	<link rel="stylesheet" href="css/responsive.css">
+</head>
+
+
+<body>
+
+	<!--login page-->
+	<div id="signup-bg">
+
+		<section id="signup">
+
+			<div class="container">
+				<div class="row text-center">
+					<div class="col-md-12">
+						<div class="main-logo">
+							<img class="main-logo img-responsive " src="images/images/top-logo.png">
+						</div>
+					</div>
+				</div>
+
+				<div id="signup-content">
+					<div class="row">
+						<div class="col-md-12">
+							<div id="signup-box">
+								<h3> Create an account</h3>
+								<h6>Enter your details to signup</h6>
+
+								<!--<h5><img src="images/images/.png">Your account has been successfully created.</h5>-->
+								<form id="signup-form">
+									<div class="form-group">
+										<label id="fname" for="exampleInputName">First Name *</label>
+										<input type="name" class="form-control input-field" aria-describedby="emailHelp" placeholder="Your First Name" required>
+
+									</div>
+									<div class="form-group">
+										<label id="lname" for="exampleInputName ">Last Name *</label>
+										<input type="name" class="form-control input-field" placeholder="Your Last Name" required>
+
+									</div>
+									<div class="form-group">
+										<label id="email" for="exampleInputEmail1 ">Email *</label>
+										<input type="email" class="form-control input-field" aria-describedby="emailHelp" placeholder="abc@gmail.com" required>
+
+									</div>
+									<div class="form-group">
+										<label id="password" for="exampleInputPassword1">Password *</label>
+
+										<input type="password" class="form-control input-field" name="spassword " id="spassword" placeholder="Enter your password" required>
+										<div class="eye"><img src="images/images/eye.png" alt="eye" onclick="Toggle4()"></div>
+									</div>
+									<div class="form-group">
+										<label id="confirmpassword password" for="exampleInputPassword2">Confirm Password *</label>
+
+										<input type="password" class="form-control input-field" id="scpassword" name="scpassword" placeholder="confirm your password" required onClick="validatePassword()">
+										<div class="eye"><img src="images/images/eye.png" alt="eye" onclick="Toggle5()"></div>
+									</div>
+
+									<button type="login" class="btn btn-primary"><a href="email-verification.html">sign up</a></button>
+								</form>
+								<h5 id="have-account">
+									Already have an account? <span><a href="login.html">Login </a> </span>
+								</h5>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<!--jquery-->
+	<script src="js/jquery.js"></script>
+	<!--bootstrap-->
+	<script src="js/bootstrap/bootstrap.min.4.5.js"></script>
+
+	<!--js-->
+	<script src="js/script.js"></script>
+</body>
+
+
+</html>

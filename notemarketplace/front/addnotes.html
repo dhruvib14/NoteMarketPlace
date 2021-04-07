@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+	<!--meta-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0 ,user-scalable=no">
+
+	<title>Notes Marketplace </title>
+
+	<!--open sans font-->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+	<!--font-awesome-->
+	<link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+	<!--bootstrap-->
+	<link rel="stylesheet" href="css/bootstrap/bootstrap.min.4.5.css">
+	<!--css-->
+	<link rel="stylesheet" href="css/style.css">
+	<!--responsive css-->
+	<link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+	<!--header-->
+	<header>
+		<nav id="navuser" class="navbar nav-notes navbar-fixed-top navbar-expand-lg navbar-light nav-user-profile ">
+			<div class="container-fluid ">
+				<div class="site-nav-wrapper">
+					<div class="navbar-header navbar-brand">
+						<a href="home.html"><img src="images/images/logo.png"></a><span id="mobile-nav-open-btn">
+							&#9776;</span>
+					</div>
+					<!--main menu-->
+
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<ul class="navbar-nav pull-right mr-auto ">
+							<li class="nav-item"><a class="smooth-scroll nav-link" href="search-notes.html">Search Notes</a></li>
+							<li class="nav-item"><a class="smooth-scroll nav-link" href="dashboard.html">Sell Your Notes</a></li>
+							<li class="nav-item"><a class="smooth-scroll nav-link" href="buyer-request.html">Buyer Request</a></li>
+							<li class="nav-item"><a class="smooth-scroll nav-link" href="faq-page.html">FAQ</a></li>
+							<li class="nav-item"><a class="smooth-scroll nav-link " href="contactus.html">Contact Us</a></li>
+							<li class="nav-item dropdown"><a class="smooth-scroll nav-link pic-nav " href="#" id="navbardrop" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="images/images/user-img.png"></a>
+								<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+									<a class="dropdown-item" href="user-profile.html">My Profile</a>
+									<a class="dropdown-item" href="mydownloads.html">My Downloads</a>
+									<a class="dropdown-item" href="sold-notes.html">My Sold Notes</a>
+									<a class="dropdown-item" href="myrejectednotes.html">My Rejected Notes</a>
+									<a class="dropdown-item" href="change-password.html">Change Password</a>
+									<a class="dropdown-item dd-logout" href="search-notes.html"><p>Logout</p></a>
+								</div>
+							</li>
+							<li class="nav-item"><a class="smooth-scroll nav-link" id="button-nav" href="search-notes.html">
+									<p>Logout</p>
+								</a></li>
+						</ul>
+					</div>
+					<!--mobile menu-->
+					<div id="mobile-nav">
+						<div class="navbar-header">
+							<a href="home.html"><img src="images/images/logo.png"></a>
+							<!--mobile menu close button-->
+							<span id="mobile-nav-close-btn">&times;</span>
+						</div>
+
+						<div id="mobile-nav-content">
+							<ul class="navbar-nav nav">
+								<li class="nav-item"><a class="smooth-scroll " href="search-notes.html">Search Notes</a></li>
+								<li class="nav-item"><a class="smooth-scroll" href="dashboard.html">Sell Your Notes</a></li>
+								<li class="nav-item"><a class="smooth-scroll " href="buyer-request.html">Buyer Request</a></li>
+								<li class="nav-item"><a class="smooth-scroll" href="faq-page.html">FAQ</a></li>
+								<li class="nav-item"><a class="smooth-scroll  " href="contactus.html">Contact Us</a></li>
+								<li class="dropdown"><a class="smooth-scroll nav-link pic-nav " href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="images/images/user-img.png"></a>
+									<div class="dropdown-menu pull-right" aria-labelledby="dropdownMenuLink">
+										<a class="dropdown-item" href="user-profile.html">My Profile</a>
+										<a class="dropdown-item" href="mydownloads.html">My Downloads</a>
+										<a class="dropdown-item" href="sold-notes.html">My Sold Notes</a>
+										<a class="dropdown-item" href="myrejectednotes.html">My Rejected Notes</a>
+										<a class="dropdown-item" href="change-password.html">Change Password</a>
+										<a class="dropdown-item dd-logout" href="search-notes.html"><p>Logout</p></a>
+									</div>
+								</li>
+								<li class="nav-item"><a class="smooth-scroll " id="button-nav" href="search-notes.html">
+										<p>Logout</p>
+									</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<!--header ends-->
+	<section id="user-profile">
+
+		<div class="row">
+
+			<div class="logo col-12">
+				<div id="user-logo">
+
+					<h3 id="user-profile-logo">Add Notes</h3>
+				</div>
+			</div>
+			<div class="container">
+				<h3> Basic Note Details</h3>
+				<form id="basic-note-form">
+
+					<div class="form-group row .no-gutters">
+						<div class="col-md-6 col-12 col-lg-6">
+							<label id="fname" class="form-info" for="exampleInputName">Title *</label>
+							<input type="name" class="form-control input-field" placeholder="Enter Your Notes title" required>
+
+						</div>
+						<div class="form-group col-md-6 col-12 col-lg-6 ">
+							<label for="phone-number">Category * </label>
+							<div class="row no-gutters">
+								<select class="form-control options-arrow-down">
+									<option selected>Ca</option>
+									<option>cs</option>
+									<option>IT</option>
+									<option>MBA</option>
+								</select>
+							</div>
+						</div>
+					</div>
+
+					<div class="form-group row">
+						<div class="col-md-6 col-12 col-lg-6">
+							<label for="profile">Profile Picture </label>
+							<div class="user-profile-photo-uploader">
+								<label for="image-uploader"><img src="images/images/upload-file.png" alt="upload your profile picture"></label>
+								<input type="file" id="image-uploader" class=" form-control" placeholder="Upload a Picture">
+								<input type="text" placeholder="Upload a picture" read-only>
+							</div>
+						</div>
+						<div class="col-md-6 col-12 col-lg-6">
+							<label for="profile">Upload Notes </label>
+							<div class="user-profile-photo-uploader">
+								<label for="image-uploader"><img src="images/images/upload-note.png" alt="upload your profile picture"></label>
+								<input type="file" id="image-uploader" class=" form-control" placeholder="Upload a Picture">
+							</div>
+						</div>
+					</div>
+
+					<div class="form-group row">
+						<div class="form-group col-md-6 col-12 col-lg-6 no-gutters">
+							<label for="exampleInputName ">Type *</label>
+							<div class="row no-gutters">
+								<select class="form-control options-arrow-down">
+									<option selected>Handwritten</option>
+									<option>Story Books</option>
+									<option>University</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-6 col-12 col-lg-6">
+							<label class="form-info" for="exampleInputName">Number Of Pages *</label>
+							<input type="name" class="form-control input-field" placeholder="Enter number of pages" required>
+
+
+						</div>
+
+					</div>
+					<div class="form-group row">
+						<div class="col-md-12 col-12">
+							<label id="fname" class="form-info" for="exampleInputName">Description *</label>
+							<textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="enter your description"></textarea>
+						</div>
+
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<!--institute details-->
+
+		<div class="row">
+			<div class="container">
+				<h3> Institution Deatils </h3>
+				<form id="address-detail-form">
+					<div class="form-group row">
+						<div class="col-md-6 col-12 col-lg-6">
+							<label class="add" for="country">Country *</label>
+							<select class="form-control options-arrow-down">
+								<option selected>India</option>
+								<option>USA</option>
+								<option>Canada</option>
+							</select>
+						</div>
+
+
+						<div class="col-md-6 col-12 col-lg-6">
+							<label class="add" for="city">Institution Name</label>
+							<input type="address" class="form-control input-field" placeholder="Enter your institution name" required>
+
+						</div>
+					</div>
+
+
+
+				</form>
+			</div>
+		</div>
+
+		<!--course details-->
+
+		<div class="row">
+			<div class="container">
+				<h3> Course Deatils </h3>
+				<form id="course-detail-form">
+					<div class="form-group row">
+						<div class="col-md-6 col-12 col-lg-6">
+							<label class="course" for="exampleInputName">Course Name </label>
+							<input type="text" class="form-control input-field" placeholder="Enter your coure name">
+
+						</div>
+						<div class="col-md-6 col-12 col-lg-6"> <label for="exampleInputName">Course Code </label>
+							<input type="text" class="form-control input-field" placeholder="Enter your Course code">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 col-12 col-lg-6"> <label for="exampleInputName">Professor/ lecturer </label>
+							<input type="text" class="form-control input-field" placeholder="Enter your professor name">
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+
+
+		<!--selling information details-->
+
+		<div class="row">
+			<div class="container">
+				<h3> Selling Information </h3>
+				<form id="selling-information-form">
+					<div class="form-group row ">
+						<div class="col-md-6 col-12 col-lg-6 ">
+							<label class="course" for="exampleInputName">Sell For* </label>
+							<div class="col-6 free-paid-radio-wrapper">
+								
+									<label class="purple-radio-input">
+										<input type="radio" name="radio"><span class="checkmark"></span>
+									</label><label class="info-label-check">Free</label>
+									<label class="purple-radio-input ">
+										<input type="radio" name="radio"><span class="checkmark"></span>
+								</label><label class="info-label-check">Paid</label>
+								</div>
+							</div>
+
+
+
+						
+
+						<div class="col-md-6"> <label for="exampleInputName">Note preview </label>
+							<div class="user-profile-photo-uploader picture-uploader">
+								<label for="image-uploader"><img src="images/images/upload-file.png" alt="upload your profile picture"></label>
+								<input type="file" id="image-uploader" class="picture-uploader form-control" placeholder="Upload a Picture">
+							</div>
+						</div></div>
+					
+					<div class="row ">
+						<div class="col-md-6 sell-price"> <label for="exampleInputName">Sell Price * </label>
+							<input type="text" class="form-control input-field" placeholder="Enter your price">
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+
+
+
+		<div class="row">
+			<div class="container">
+				<button type="submit" id="user-submit" class="btn btn-primary">Save</button>
+				<button type="submit" id="user-submit" class="btn btn-primary">publish</button>
+			</div>
+		</div>
+
+	</section>
+	<div class="footer">
+		<hr>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-sm-7 col-xs-7">
+					<p>Copyright <span>&#169;</span> Tatvasoft All rights reserved.</p>
+				</div>
+				<div class="col-md-6 col-sm-5 col-xs-5 social-icons">
+					<ul class="social-list">
+
+						<li> <a href="#"><i class="fa fa-linkedin"> </i></a></li>
+						<li> <a href="#"><i class="fa fa-twitter"> </i></a></li>
+						<li> <a href="#"><i class="fa fa-facebook"> </i></a></li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--jquery-->
+	<script src="js/jquery.js"></script>
+	<!--bootstrap-->
+	<script src="js/bootstrap/bootstrap.min.4.5.js"></script>
+
+	<!--js-->
+	<script src="js/script.js"></script>
+</body>
+
+</html>

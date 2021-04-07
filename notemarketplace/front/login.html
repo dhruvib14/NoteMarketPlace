@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+	<!--meta-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0 ,user-scalable=no">
+
+	<title>Notes Marketplace </title>
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="images/images/favicon.ico">
+
+	<!--open sans font-->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+	<!--font-awesome-->
+	<link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+	<!--bootstrap-->
+	<link rel="stylesheet" href="css/bootstrap/bootstrap.min.4.5.css">
+
+	<!--css-->
+	<link rel="stylesheet" href="css/style.css">
+	<!--responsive-->
+	<link rel="stylesheet" href="css/responsive.css">
+</head>
+
+
+<body>
+
+	<!--login page-->
+	<div id="login-bg">
+
+		<section id="login">
+
+			<div class="container">
+				<div class="row text-center">
+					<div class="col-md-12">
+						<img class="main-logo img-responsive " src="images/images/top-logo.png">
+
+					</div>
+				</div>
+
+				<div id="login-content">
+					<div class="row">
+						<div class="col-md-12">
+							<div id="login-box">
+								<h3> Login</h3>
+								<h6 class="inline">Enter your email address and password to login</h6>
+								<form id="login-form">
+									<div class="form-group">
+										<label id="email" for="exampleInputEmail1">Email</label>
+										<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="abc@gmail.com">
+
+									</div>
+									<div class="form-group" id="password-both">
+										<label id="password" for="exampleInputPassword1">Password</label>
+										<label id="forgot-password-login" for="forgot-Password1"><a href="forgot-password.html">Forgot Password?</a></label>
+
+										<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter your password">
+										<div class="eye"><img src="images/images/eye.png" alt="eye" onclick="Toggle()"></div>
+									</div>
+									<small id="incorrect-password" class="form-text">The Password that you've entered is incorrect</small>
+
+									<div class="form-group form-check">
+										<input type="checkbox" class="form-check-input" id="exampleCheck1">
+										<label id="remember" class="form-check-label" for="exampleCheck1">Remember Me</label>
+									</div>
+									<button type="login" class="btn btn-primary"><a href="search-notes.html">Login</a></button>
+								</form>
+								<h5 id="not-account">
+									Don't have an account?<span><a href="sign-up.html"> Sign Up </a> </span>
+								</h5>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<!--jquery-->
+	<script src="js/jquery.js"></script>
+	<!--bootstrap-->
+	<script src="js/bootstrap/bootstrap.min.4.5.js"></script>
+
+	<!--js-->
+	<script src="js/script.js"></script>
+</body>
+
+
+</html>

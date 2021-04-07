@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+	<!--meta-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0 ,user-scalable=no">
+
+	<title>Notes Marketplace </title>
+
+	<!--open sans font-->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+	<!--font-awesome-->
+	<link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+	<!--bootstrap-->
+	<link rel="stylesheet" href="css/bootstrap/bootstrap.min.4.5.css">
+	<!--css-->
+	<link rel="stylesheet" href="css/style.css">
+	<!--responsive css-->
+	<link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+	<!--header-->
+	<header>
+		<nav id="navuser" class="navbar nav-notes navbar-fixed-top navbar-expand-lg navbar-light nav-user-profile ">
+			<div class="container-fluid ">
+				<div class="site-nav-wrapper ">
+					<div class="navbar-header navbar-brand">
+						<a href="home.html"><img src="images/images/logo.png"> </a><span id="mobile-nav-open-btn">
+							&#9776;</span>
+					</div>
+					<!--main menu-->
+
+					<div class="collapse navbar-collapse">
+						<ul class="navbar-nav nav pull-right ">
+							<li class="nav-item"><a class="smooth-scroll nav-link" href="search-notes.html">Search Notes</a></li>
+							<li class="nav-item"><a class="smooth-scroll nav-link" href="dashboard.html">Sell Your Notes</a></li>
+							<li class="nav-item"><a class="smooth-scroll nav-link" href="faq-page.html">FAQ</a></li>
+							<li class="nav-item"><a class="smooth-scroll nav-link active" href="contactus.html">Contact Us</a></li>
+							<li class="nav-item"><a class="smooth-scroll nav-link" id="button-nav" href="login.html">
+									<p>Login</p>
+								</a></li>
+						</ul>
+					</div>
+
+
+					<!--mobile menu-->
+					<div id="mobile-nav">
+						<div class="navbar-header">
+							<a href="home.html"><img src="images/images/logo.png"></a>
+							<!--mobile menu close button-->
+							<span id="mobile-nav-close-btn">&times;</span>
+						</div>
+
+						<div id="mobile-nav-content">
+							<ul class="navbar-nav">
+								<li class="nav-item"><a class="smooth-scroll nav-link" href="search-notes.html">Search Notes</a></li>
+								<li class="nav-item"><a class="smooth-scroll nav-link" href="dashboard.html">Sell Your Notes</a></li>
+								<li class="nav-item"><a class="smooth-scroll nav-link" href="faq-page.html">FAQ</a></li>
+								<li class="nav-item"><a class="smooth-scroll nav-link active" href="contactus.html">Contact Us</a></li>
+								<li class="nav-item"><a class="smooth-scroll nav-link" id="button-nav" href="login.html">
+										<p>Login</p>
+									</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+
+	</header>
+
+	<!--header ends-->
+
+
+	<div class="logo">
+		<div id="user-logo">
+
+			<h3 id="user-profile-logo">Contact Us</h3>
+		</div>
+	</div>
+
+
+
+	<div class="row">
+		<div class="container horizontal-heading contact-us">
+			<h3> Basic Profile Details</h3>
+			<form id="basic-profile-form">
+				<div class="form-group row">
+					<div class="col-md-6 col-lg-6 col-12">
+						<label id="fname" class="form-info" for="exampleInputName">Full Name *</label>
+						<input type="name" class="form-control input-field" placeholder="Enter Your Full Name" required>
+
+					</div>
+					<div class="form-group col-md-6 col-lg-6 col-12">
+						<label for="exampleInputName ">Comments *</label>
+						<textarea class="form-control" id="exampleFormControlTextarea1" rows="6" placeholder="Comments..."></textarea>
+
+
+					</div>
+				</div>
+				<div class="form-group contact-1-row row">
+					<div class="col-md-6 col-lg-6 col-12">
+						<label id="email" for="exampleInputEmail1 ">Email *</label>
+						<input type="email" class="form-control input-field" aria-describedby="emailHelp" placeholder="Enter your email address" required>
+					</div>
+				</div>
+				<div class="form-group contact-2-row row">
+					<div class="col-md-6 col-lg-6 col-12">
+						<label id="email" for="exampleInputEmail1 ">Subject *</label>
+						<input type="email" class="form-control input-field" aria-describedby="emailHelp" placeholder="Enter your subject" required>
+					</div>
+				</div>
+
+			</form>
+		</div>
+	</div>
+
+	<div class="row ">
+		<div class="container"><div class="col-12">
+			<button type="submit" id="user-submit" class="btn btn-primary">Submit</button>
+		</div></div>
+	</div>
+
+	<div class="footer">
+		<hr>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-sm-7 col-xs-7">
+					<p>Copyright <span>&#169;</span> Tatvasoft All rights reserved.</p>
+				</div>
+				<div class="col-md-6 col-sm-5 col-xs-5 social-icons">
+					<ul class="social-list">
+
+						<li> <a href="#"><i class="fa fa-linkedin"> </i></a></li>
+						<li> <a href="#"><i class="fa fa-twitter"> </i></a></li>
+						<li> <a href="#"><i class="fa fa-facebook"> </i></a></li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--jquery-->
+	<script src="js/jquery.js"></script>
+	<!--bootstrap-->
+	<script src="js/bootstrap/bootstrap.min.4.5.js"></script>
+
+	<!--js-->
+	<script src="js/script.js"></script>
+
+</body>
+
+</html>
