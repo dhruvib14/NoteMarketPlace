@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+	<!--meta-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0 ,user-scalable=no">
+
+	<title>Notes Marketplace </title>
+
+	<!--open sans font-->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+	<!--font-awesome-->
+	<link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+	<!--bootstrap-->
+	<link rel="stylesheet" href="css/bootstrap/bootstrap.min.4.5.css">
+	<!--css-->
+	<link rel="stylesheet" href="css/style.css">
+	<!--responsive css-->
+	<link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+	<!--header-->
+	<header>
+		<nav id="navuser" class="navbar nav-notes navbar-fixed-top navbar-expand-lg navbar-light  ">
+			<div class="container-fluid ">
+				<div class="site-nav-wrapper">
+					<div class="navbar-header navbar-brand">
+						<a href="admin-dashboard.html"><img src="images/images/logo.png"></a><span id="mobile-nav-open-btn">
+							&#9776;</span>
+					</div>
+					<!--main menu-->
+
+					<div class="collapse navbar-collapse">
+						<ul class="navbar-nav pull-right ">
+							<li class="nav-item"><a class="smooth-scroll nav-link" href="admin-dashboard.html">Dashboard</a></li>
+
+							<li class="nav-item dropdown"><a class="smooth-scroll nav-link " href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Notes</a>
+								<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+									<a class="dropdown-item" href="admin-notes-under-review.html">Notes Under Review</a>
+									<a class="dropdown-item" href="admin-published-notes.html">Published Notes</a>
+									<a class="dropdown-item" href="admin-downloaded-notes.html">Downloaded Notes</a>
+									<a class="dropdown-item" href="admin-rejected-notes.html">Rejected Notes</a>
+								</div>
+							</li>
+							<li class="nav-item"><a class="smooth-scroll nav-link " href="admin-members.html">Members</a></li>
+							<li class="nav-item dropdown"><a class="smooth-scroll nav-link" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Reports</a>
+								<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+									<a class="dropdown-item" href="admin-spamreports.html">Spam Reports</a>
+								</div>
+							</li>
+							<li class="nav-item dropdown"><a class="smooth-scroll nav-link active" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Settings</a>
+								<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+									<a class="dropdown-item" href="admin-manage-system.html">Manage System Configuration</a>
+									<a class="dropdown-item" href="admin-manage-administration.html">Manage Administration</a>
+									<a class="dropdown-item" href="admin-manage-category.html">Manage Category</a>
+
+									<a class="dropdown-item" href="admin-manage-type.html">Manage Type</a>
+									<a class="dropdown-item" href="admin-manage-country.html">Manage Countries</a>
+								</div>
+							</li>
+							<li class="nav-item dropdown"><a class="smooth-scroll nav-link pic-nav " href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="images/images/user-img.png"></a>
+								<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+									<a class="dropdown-item" href="admin-myprofile.html">Update Profile</a>
+									<a class="dropdown-item" href="change-password.html">Change Password</a>
+									<a class="dropdown-item dd-logout" href="admin-login.html"><p>Logout</p></a>
+								</div>
+							</li>
+							<li class="nav-item"><a class="smooth-scroll nav-link" id="button-nav" href="admin-login.html">
+									<p>Logout</p>
+								</a></li>
+						</ul>
+					</div>
+					<!--mobile menu-->
+					<div id="mobile-nav">
+						<div class="navbar-header">
+							<img src="images/images/logo.png">
+							<!--mobile menu close button-->
+							<span id="mobile-nav-close-btn">&times;</span>
+						</div>
+
+						<div id="mobile-nav-content">
+							<ul class="navbar-nav  ">
+								<li class="nav-item"><a class="smooth-scroll nav-link " href="admin-dashboard.html">Dashboard</a></li>
+
+								<li class="nav-item dropdown"><a class="smooth-scroll nav-link" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Notes</a>
+									<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+										<a class="dropdown-item" href="admin-notes-under-review.html">Notes Under Review</a>
+										<a class="dropdown-item" href="admin-published-notes.html">Published Notes</a>
+										<a class="dropdown-item" href="admin-downloaded-notes.html">Downloaded Notes</a>
+										<a class="dropdown-item" href="admin-rejected-notes.html">Rejected Notes</a>
+									</div>
+								</li>
+								<li class="nav-item"><a class="smooth-scroll nav-link " href="admin-members.html">Members</a></li>
+								<li class="nav-item dropdown"><a class="smooth-scroll nav-link" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Reports</a>
+									<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+										<a class="dropdown-item" href="admin-spamreports.html">Spam Reports</a>
+									</div>
+								</li>
+								<li class="nav-item dropdown"><a class="smooth-scroll nav-link active" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Settings</a>
+									<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+										<a class="dropdown-item" href="admin-manage-system.html">Manage System Configuration</a>
+										<a class="dropdown-item" href="admin-manage-administration.html">Manage Administration</a>
+										<a class="dropdown-item" href="admin-manage-category.html">Manage Category</a>
+
+										<a class="dropdown-item" href="admin-manage-type.html">Manage Type</a>
+										<a class="dropdown-item" href="admin-manage-country.html">Manage Countries</a>
+									</div>
+								</li>
+								<li class="nav-item dropdown"><a class="smooth-scroll nav-link pic-nav " href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="images/images/user-img.png"></a>
+									<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+										<a class="dropdown-item" href="admin-myprofile.html">Update Profile</a>
+										<a class="dropdown-item" href="change-password.html">Change Password</a>
+										<a class="dropdown-item dd-logout" href="admin-login.html"><p>Logout</p></a>
+									</div>
+								</li>
+								<li class="nav-item"><a class="smooth-scroll nav-link" id="button-nav" href="admin-login.html">
+										<p>Logout</p>
+									</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+
+	</header>
+
+	<section id="user-profile" class="admin-myprofie">
+
+		<div class="row">
+			<div class="container">
+				<h3> Manage System Configuration</h3>
+				<form id="basic-profile-form">
+					<div class="form-group row">
+						<div class="col-md-8 col-lg-6 col-12">
+							<label id="fname" class="form-info" for="exampleInputName">Support email address*</label>
+							<input type="name" class="form-control input-field" value="john" required>
+						</div>
+					</div>
+					<div class="form-group row">
+						<div class="col-md-8 col-lg-6 col-12">
+							<label id="lname" for="exampleInputName ">Support phone number *</label>
+							<select class="form-control options-arrow-down">
+								<option selected>+91</option>
+								<option>+81</option>
+								<option>+63</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group row">
+						<div class="col-md-8 col-lg-6 col-12">
+							<label id="email" for="exampleInputEmail1 " class="inline-block">Email Address(es) (for various events system will send notifications to these users)*</label>
+							<input type="email" class="form-control input-field" aria-describedby="emailHelp" placeholder="enter email address" required>
+						</div>
+					</div>
+					<div class="form-group row">
+						<div class="col-md-8 col-lg-6 col-12">
+							<label id="email" for="exampleInputEmail1 ">Facebook URL</label>
+							<input type="email" class="form-control input-field" aria-describedby="emailHelp" placeholder="enter facebook url">
+						</div>
+					</div>
+					<div class="form-group row">
+						<div class="col-md-8 col-lg-6 col-12">
+							<label id="email" for="exampleInputEmail1 ">Twitter URL</label>
+							<input type="email" class="form-control input-field" aria-describedby="emailHelp" placeholder="enter twitter url">
+						</div>
+					</div>
+					<div class="form-group row">
+						<div class="col-md-8 col-lg-6 col-12">
+							<label id="email" for="exampleInputEmail1 ">Linkedin URL</label>
+							<input type="email" class="form-control input-field" aria-describedby="emailHelp" placeholder="enter linkedin url">
+						</div>
+					</div>
+
+					<div class="form-group row">
+						<div class="col-md-8 col-lg-6 col-12">
+							<label for="profile">Default image for notes (if seller do not upload)</label>
+							<div class="user-profile-photo-uploader">
+								<label for="image-uploader"><img src="images/images/upload-file.png" alt="upload your profile picture"></label>
+								<input type="file" id="image-uploader" class=" form-control" placeholder="Upload a Picture">
+							</div>
+
+						</div>
+					</div>
+
+					<div class="form-group row">
+						<div class="col-md-8 col-lg-6 col-sm-12">
+							<label for="profile">Default profile picture (if seller do not upload)</label>
+							<div class="user-profile-photo-uploader">
+								<label for="image-uploader"><img src="images/images/upload-file.png" alt="upload your profile picture"></label>
+								<input type="file" id="image-uploader" class=" form-control" placeholder="Upload a Picture">
+							</div>
+						</div>
+					</div>
+
+				</form>
+				<div class="row">
+					<div class="container">
+						<button type="submit" id="user-submit" class="btn btn-primary">Submit</button>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<div class="admin-footer">
+		<hr>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-sm-4 col-xs-4">
+					vesion 1.1.24
+				</div>
+				<div class="col-md-6 col-sm-8 col-xs-8 text-right">
+					<p>Copyright <span>&#169;</span> Tatvasoft All rights reserved.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--jquery-->
+	<script src="js/jquery.js"></script>
+	<!--bootstrap-->
+	<script src="js/bootstrap/bootstrap.bundle.min.js"></script>
+	<script src="js/bootstrap/bootstrap.min.4.5.js"></script>
+
+	<!--js-->
+	<script src="js/script.js"></script>
+</body>
+
+</html>
