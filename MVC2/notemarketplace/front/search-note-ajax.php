@@ -2,24 +2,25 @@
 include "db.php";
 
 //ternary operator to store data
-if(isset($_GET['selected_search']))
-    $selected_search = $_GET['selected_search'] ;
+if(isset($_GET['selected_search'])){
+    $selected_search = $_GET['selected_search'];
+    echo $selected_search;}
     else
     $selected_search = "";
 
-if(isset($_GET['selected_type']))
+if(isset($_GET['selected_type'])){
     $selected_type = $_GET['selected_type'] ;
-    else {
-    
-    } $selected_type = "";
+  }
+    else  $selected_type = "";
 
 if(isset($_GET['selected_category']))
      $selected_category = $_GET['selected_category'] ;
      else
      $selected_category = "";
 
-if(isset($_GET['selected_university']))
+if(isset($_GET['selected_university'])){
      $selected_university = $_GET['selected_university'] ;
+    }
      else
      $selected_university = "";
 
@@ -37,29 +38,46 @@ if(isset($_GET['selected_rating']))
      $selected_rating = "";
 
 //to get all the notes
-$all_note_query = "SELECT DISTINCT notes.ID,notes.Note_Title,notes.Note_types,notes.PublishedDate,
-                   notes.Note_Display_Picture,notes.Note_Pages,notes.University
+$all_note_query = "SELECT DISTINCT notes.ID,notes.Note_Title,notes.Note_types,notes.Category,notes.PublishedDate,
+                   notes.Note_Display_Picture,notes.Note_Pages,notes.University,notes.Course
                    FROM notes 
                    LEFT JOIN review_rating 
                    ON review_rating.NoteID=notes.ID 
                    WHERE notes.IsActive=1 
-                   /*AND Note_Title LIKE '%$selected_search%' 
-                   AND Note_types LIKE '%$selected_type%'
+                   AND Note_Title LIKE '%$selected_search%' 
+                   /*AND Note_types LIKE '%$selected_type%'
                    AND Category LIKE '%$selected_category%'
                    AND University LIKE'%$selected_university%'
                    AND Course LIKE'%$selected_course%'
                    AND Country LIKE '%$selected_country%'
-                   AND ratings>$selected_rating
-                   ORDER BY notes.PublishedDate DESC*/";
+                   */";
+
+$query_append = "";
+
+//to append all the query
+($selected_type != 0 && $selected_type != "")
+    ? $query_append .= " AND Note_types='$selected_type'" : "";
+
+($selected_category != 0 && $selected_category != "")
+    ? $query_append .= " AND Category='$selected_category'" : "";
+
+($selected_university != 0 && $selected_university != "")
+    ? $query_append .= " AND University='$selected_university'" : "";
+
+($selected_course != 0 && $selected_course != "")
+    ? $query_append .= " AND Course_Code='$selected_course'" : "";
+
+($selected_country != 0 && $selected_country != "")
+    ? $query_append .= " AND Country='$selected_country'" : "";
+
+($selected_rating != 0 && $selected_rating != "")
+    ? $query_append .= " AND ratings>$selected_rating " : "";
 
 
 //display total count
-$filter_search_result_all = mysqli_num_rows(mysqli_query($connection, $all_note_query));
-echo $filter_search_result_all;
-$filter_search_result = mysqli_query($connection, $all_note_query);
-if(!$filter_search_result){
-    echo mysqli_error($connection);
-}
+$filter_search_result_all = mysqli_num_rows(mysqli_query($connection, $all_note_query . $query_append));
+echo  $filter_search_result_all;
+
 //pagination
 (!empty(isset($_GET['page']))) && ($_GET['page'] != "") ? $page = $_GET['page'] : $page = 1;
 $limit = 10;
@@ -69,14 +87,18 @@ $total_page = ceil($filter_search_result_all / $limit);
 $start_from = ($page - 1) * $limit;
 
 
+
+$filter_search_query = $all_note_query . $query_append . " ORDER BY notes.PublishedDate DESC " . "LIMIT " . $start_from . "," . $limit;
+if(!$filter_search_query){
+    mysqli_error($connection);
+}
+$filter_search_result = mysqli_query($connection, $filter_search_query);
 ?>
-<script>
-</script>
 <div id="search-result">
     <div class="container">
         <div class="row">
             <div id="search-result-heading">
-                <div class="col-md-12 col-md-12 col-sm-12 col-12">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
                     <?php
                     if ($filter_search_result_all != 0)
                         echo " <h2>Total " . $filter_search_result_all . " notes</h2>";
@@ -87,28 +109,30 @@ $start_from = ($page - 1) * $limit;
             </div>
         </div>
     </div>
-    <div class="container">
-        <div class="row">
+  
+       <div class="container">
 
             <?php
 
             //to get all books data
             while ($row = mysqli_fetch_assoc($filter_search_result)) {
+               
                 $note_id = $row['ID'];
                 $note_pic = $row['Note_Display_Picture'];
                 $note_title = $row['Note_Title'];
                 $university_name = $row['University'];
                 $note_page = $row['Note_Pages'];
-                $note_pub_date = $row['PublishedDate']; ?>
-
+                $note_pub_date = $row['PublishedDate']; 
+                ?>
+   
             <div class="col-lg-4 col-md-6 col-sm-6 col-12 single-book-selecter">
-                <?php echo "<a href='notes-details.php?id=$note_id'>"; ?>
+                <?php echo "<a href='note-details.php?id=$note_id'>"; ?>
 
                 <!-- display img -->
                 <img src='<?php echo $note_pic ?>' class="img-fluid search-img-border" 
                     title='Click to View <?php echo $note_title ?>' alt='Book Cover photo of <?php echo $note_title ?>'>
                 <?php echo "</a>
-                        <a href='notes-details.php?id=$note_id' title='Click to view $note_title'>";
+                        <a href='note-details.php?id=$note_id' title='Click to view $note_title'>";
                     ?>
                 <div class="search-result-below-img">
                     <ul>
@@ -166,7 +190,7 @@ $start_from = ($page - 1) * $limit;
                     </div>
                     <?php } ?>
 
-                    <div class="notes-star">
+                    <div class="notes-star" style="margin-left:20px;">
 										<?php for($i=0;$i<$ratiing_val;$i++){
 											echo "<img src='images/images/star.png'>";
 										}
@@ -178,11 +202,11 @@ $start_from = ($page - 1) * $limit;
 									<?php 
 									?>
 							</div>
-                </div>
-                </a>
-            </div>
-            <?php } ?>
-        </div>
+	 
+		   </div>
+            
+            <?php echo "</a>"; } ?>
+         
     </div>
 </div>
 
@@ -191,13 +215,13 @@ $start_from = ($page - 1) * $limit;
 <div class="search-pagination">
     <ul class="pagination justify-content-center">
         <?php
-        echo "<li class='page-item'><a onclick=" . "showNotes($page-1)" . " class='page-link' >❮</a></li>";
+        echo "<li class='page-item'><a onclick=" . "showNotes($page-1)" . " class='page-link' ><img src='images/images/left-arrow.png'></a></li>";
         for ($i = 1; $i <= $total_page; $i++) {
             if ($i == $page) {
                 echo "<li class='page-item active'><a class='page-link' onclick=" . "showNotes($i)" . ">$i</a></li>";
             } else echo "<li class='page-item'><a class='page-link' onclick=" . "showNotes($i)" . ">$i</a></li>";
         }
-        echo "<li class='page-item'><a onclick=" . "showNotes($page+1)" . " class='page-link'>❯</a></li>";
+        echo "<li class='page-item'><a onclick=" . "showNotes($page+1)" . " class='page-link'><img src='images/images/right-arrow.png'></a></li>";
         ?>
     </ul>
 </div>
