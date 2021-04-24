@@ -80,7 +80,7 @@ echo  $filter_search_result_all;
 
 //pagination
 (!empty(isset($_GET['page']))) && ($_GET['page'] != "") ? $page = $_GET['page'] : $page = 1;
-$limit = 10;
+$limit = 9;
 $total_page = ceil($filter_search_result_all / $limit);
 ($page < 1) ? $page = 1 : "";
 ($filter_search_result_all > 0 && $total_page < $page) ? $page = $total_page : "";
@@ -111,7 +111,7 @@ $filter_search_result = mysqli_query($connection, $filter_search_query);
     </div>
   
        <div class="container">
-
+<div class="row">
             <?php
 
             //to get all books data
@@ -125,7 +125,7 @@ $filter_search_result = mysqli_query($connection, $filter_search_query);
                 $note_pub_date = $row['PublishedDate']; 
                 ?>
    
-            <div class="col-lg-4 col-md-6 col-sm-6 col-12 single-book-selecter">
+            <div class="col-lg-4 col-md-6 col-sm-6  single-book-selecter">
                 <?php echo "<a href='note-details.php?id=$note_id'>"; ?>
 
                 <!-- display img -->
@@ -203,10 +203,11 @@ $filter_search_result = mysqli_query($connection, $filter_search_query);
 									?>
 							</div>
 	 
-		   </div>
+		   
             
-            <?php echo "</a>"; } ?>
-         
+            <?php echo "</a>"; ?></div>
+			<?php } ?>
+         </div>
     </div>
 </div>
 
