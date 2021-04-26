@@ -211,29 +211,8 @@ else{
 						</div>
 						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
 							<div class="numbers-of-notes dashboard-box"><a href="sold-notes.php">
-						<?php 
-								$query_sold_notes=mysqli_query($connection,"SELECT  DISTINCT NoteID FROM downloads WHERE IsSellerHasAllowedDownload='1'AND SellerID=$userid");
-								if(!$query_sold_notes){
-									echo mysqli_error($connection);
-								}
-								$row = mysqli_num_rows($query_sold_notes);
-                               
-
-								$query_earning=mysqli_query($connection,"SELECT SUM(PurchasedPrice) FROM downloads WHERE IsSellerHasAllowedDownload='1'AND SellerID=$userid ");
-								$row1=mysqli_fetch_row($query_earning);
-								$total_earning=$row1[0];
- 
-								$query_downloads=mysqli_query($connection,"SELECT DISTINCT NoteID FROM downloads WHERE IsSellerHasAllowedDownload='1'AND DownloaderID=$userid ");						
-								$total_downloads=mysqli_num_rows($query_downloads);
-								
-								$query_rejected=mysqli_query($connection,"SELECT DISTINCT ID FROM notes WHERE Status='10' AND SellerID=$userid ");						
-								$total_rejected=mysqli_num_rows($query_rejected);
-
-
-								$query_buyer_Request=mysqli_query($connection,"SELECT DISTINCT NoteID FROM downloads WHERE IsSellerHasAllowedDownload='0' AND SellerID=$userid ");						
-								$total_buyer_Request=mysqli_num_rows($query_buyer_Request);
-								?>
-									<p class="dashboard-single-details text-center"><?php echo $row;?></p>
+						
+									<p class="dashboard-single-details text-center">20</p>
 									<p class="dashboard-detail-heading text-center">Numbers of Notes Sold</p>
 								</a>
 							</div>
@@ -241,7 +220,7 @@ else{
 
 						<div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
 							<div class="money-earned dashboard-box"><a href="sold-notes.php">
-									<p class="dashboard-single-details text-center">$<?php echo $total_earning;?></p>
+									<p class="dashboard-single-details text-center">$200</p>
 									<p class="dashboard-detail-heading text-center">Money Earned</p>
 								</a>
 							</div>
