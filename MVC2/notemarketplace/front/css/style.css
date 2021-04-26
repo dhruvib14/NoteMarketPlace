@@ -308,11 +308,11 @@ Red  color: #FF3636
 
 
 
-.pic-nav {
+.pic-nav img{
 	width: 40px;
 	height: 40px;
 	margin-left: 10px;
-	margin-right: 40px;
+	margin-right: 10px;
 	padding: 0;
 
 }
