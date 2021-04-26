@@ -2,7 +2,7 @@
 include "db.php";
 session_start();
 if(!isset($_SESSION["useremail"])){
-	//header("Location:dashboard2.php");
+	header("Location:dashboard2.php");
 	
 }
 if(isset($_SESSION["useremail"])){
