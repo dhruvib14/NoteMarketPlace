@@ -22,7 +22,7 @@ if (isset($_POST['progress-search'])) {
 
     $search_progress = $_POST['search'];
 echo $search_progress;
-    $query = "SELECT notes.ID,notes.CreatedDate,notes.Note_Title, category.Category_name,referencedata.Value FROM notes LEFT JOIN  category ON notes.Category=category.ID LEFT JOIN referencedata ON notes.Status=referencedata.ID WHERE notes.Note_Title LIKE '%$search_progress%' OR notes.Category LIKE '%$search_progress%' OR notes.Status LIKE '%$search_progress%' AND notes.IsActive=1 AND referencedata.ID IN (6,7,8) ORDER BY notes.CreatedDate DESC";
+    $query = "SELECT notes.ID,notes.CreatedDate,notes.Note_Title, category.Category_name,referencedata.Value FROM notes LEFT JOIN  category ON notes.Category=category.ID LEFT JOIN referencedata ON notes.Status=referencedata.ID WHERE notes.Note_Title LIKE '%$search_progress%' OR category.Category_name LIKE '%$search_progress%' OR referencedata.Value LIKE '%$search_progress%' AND notes.IsActive=1 AND referencedata.ID IN (6,7,8)  ORDER BY notes.CreatedDate DESC";
 	$result = mysqli_query($connection, $query);
 		
 }
