@@ -89,15 +89,15 @@ if(isset($_GET['adminid'])){
 						<ul class="navbar-nav pull-right ">
 							<li class="nav-item"><a class="smooth-scroll nav-link " href="admin-dashboard.php">Dashboard</a></li>
 
-							<li class="nav-item dropdown"><a class="smooth-scroll nav-link active" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Notes</a>
+							<li class="nav-item dropdown"><a class="smooth-scroll nav-link " href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Notes</a>
 								<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
 									<a class="dropdown-item" href="admin-notes-under-review.php">Notes Under Review</a>
 									<a class="dropdown-item " href="admin-published-notes.php">Published Notes</a>
 									<a class="dropdown-item" href="admin-downloaded-notes.php">Downloaded Notes</a>
-									<a class="dropdown-item active" href="admin-rejected-notes.php">Rejected Notes</a>
+									<a class="dropdown-item " href="admin-rejected-notes.php">Rejected Notes</a>
 								</div>
 							</li>
-							<li class="nav-item"><a class="smooth-scroll nav-link" href="admin-members.php">Members</a></li>
+							<li class="nav-item"><a class="smooth-scroll nav-link active" href="admin-members.php">Members</a></li>
 							<li class="nav-item dropdown"><a class="smooth-scroll nav-link" href="#" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Reports</a>
 								<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
 									<a class="dropdown-item" href="admin-spamreports.php">Spam Reports</a>
