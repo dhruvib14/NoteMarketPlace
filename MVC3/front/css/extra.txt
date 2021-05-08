@@ -1,0 +1,38 @@
+<?php 
+					while($row=mysqli_fetch_assoc($query_publish_notes)){
+						$note_title=$row['Note_Title'];
+						$category=$row['Category'];
+						$attachment_size=$row['Note_types'];
+						echo "<tr>
+						<td scope='col'>1</td>
+						<td scope='col'>$note_title</td>
+						<td scope='col'>$category</td>
+</tr>";
+					}
+				
+					?>
+
+
+
+
+
+
+
+if(isset($_POST['month'])){
+$month_selcted=$_POST['month'];
+echo $month_selcted;
+}
+else{
+	$month_selcted=0;
+}
+
+if(isset($_POST['search'])){
+$search_result=$_POST['search_result'];
+$query_publish_notes=mysqli_query($connection,"SELECT * FROM notes WHERE notes.Status=9 AND Note_Title LIKE '%$search_result%' AND month(notes.CreatedDate)=$month_selcted ");
+if(!$query_publish_notes){
+	echo mysqli_error($connection);
+}
+}
+else{
+	$query_publish_notes=mysqli_query($connection,"SELECT * FROM notes WHERE notes.Status=9 ");
+}
