@@ -10,7 +10,12 @@ if(isset($_SESSION['useremail'])){
 	}
 	while($row=mysqli_fetch_array($result)){
 		$admin_id=$row['ID'];
-	}		
+	}
+	$query=mysqli_query($connection,"SELECT Profile_Pic FROM users_details WHERE UserID=$admin_id");
+	
+	while($row=mysqli_fetch_array($query)){
+		$profile_pic=$row['Profile_Pic'];
+	}
 }
 else{
 	header("Location:../front/login1.php");
